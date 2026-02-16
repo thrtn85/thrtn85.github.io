@@ -365,10 +365,10 @@ img { max-width: 100%; display: block; }
     transform: translateY(-4px);
 }
 
-.pillar-icon i { font-size: 2rem; margin-bottom: 16px; }
-.pillar-icon .fa-sun { color: #ffff00;}
-.pillar-icon .fa-heart { color: #ff0000;}
-.pillar-icon .fa-bolt,
+.pillar-icon svg { font-size: 1.5rem; margin-bottom: 16px; }
+.pillar-icon svg.fa-sun { color: #ffff00;}
+.pillar-icon svg.fa-heart { color: #ff0000;}
+.pillar-icon svg.fa-bolt,
 .hero-badge .fa-bolt { color: #ffa500;}
 .pillar h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
 .pillar p { font-size: .85rem; color: var(--mid); line-height: 1.6; }
