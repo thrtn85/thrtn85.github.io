@@ -33,6 +33,24 @@
     });
   }
 
+  /* ---- FAQ accordion (service pages only) ----
+     Progressive enhancement: answers are visible by default. Only once JS
+     runs do we add html.faq-js (which collapses panels) and wire toggles,
+     so no-JS users and crawlers still read every answer. */
+  var faqItems = document.querySelectorAll(".faq-item");
+  if (faqItems.length) {
+    document.documentElement.classList.add("faq-js");
+    faqItems.forEach(function (item) {
+      var btn = item.querySelector(".faq-q");
+      if (!btn) return;
+      btn.setAttribute("aria-expanded", "false");
+      btn.addEventListener("click", function () {
+        var open = item.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    });
+  }
+
   /* ---- Smooth anchor offset for fixed header ---- */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener("click", function (e) {
