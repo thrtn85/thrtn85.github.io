@@ -277,6 +277,7 @@ img { display: block; max-width: 100%; }
   display: none; background: none; border: none; cursor: pointer;
   width: 44px; height: 44px; align-items: center; justify-content: center;
   flex-direction: column; gap: 5px;
+  position: relative; z-index: 102; /* stay above the open drawer so the ✕ closes it */
 }
 .menu-toggle span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
 .menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -366,17 +367,19 @@ img { display: block; max-width: 100%; }
   background: var(--panel); border: 1px solid var(--border);
   border-radius: var(--radius-card); padding: 32px 28px;
   box-shadow: var(--shadow-sm);
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  --svc-transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
+  transition: var(--svc-transition);
 }
-/* Top accent bar that wipes in on hover — the editorial "block" cue */
-.svc-card::before {
-  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: var(--blue);
-  transform: scaleX(0); transform-origin: left;
-  transition: transform .28s ease;
+/* Once revealed, the scroll-reveal `.reveal` transition no longer applies its
+   own rule, but its higher specificity (.js-reveal .reveal) still wins over
+   `.svc-card`. Restore the interaction transition at matching specificity so
+   hover animates smoothly instead of snapping. */
+.js-reveal .svc-card.in-view {
+  transition: var(--svc-transition);
 }
-.svc-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--blue-light); }
-.svc-card:hover::before { transform: scaleX(1); }
+/* Hard offset shadow on hover — the editorial "stamped block" cue.
+   will-change is scoped to hover so cards aren't kept on a GPU layer at rest. */
+.svc-card:hover { transform: translateY(-4px); box-shadow: 6px 6px 0 0 var(--blue), var(--shadow-lg); border-color: var(--blue); will-change: transform; }
 .svc-icon {
   width: 54px; height: 54px; border-radius: 8px;
   background: linear-gradient(135deg, rgba(45,107,255,.10), rgba(45,107,255,.18));
@@ -656,7 +659,7 @@ img { display: block; max-width: 100%; }
 
 /* ---------- Mobile menu drawer ---------- */
 .mobile-menu {
-  display: none; position: fixed; inset: 0; z-index: 99;
+  display: none; position: fixed; inset: 0; z-index: 101;
   background: rgba(10,14,20,.98); backdrop-filter: blur(8px);
   padding: 96px 28px 40px;
   transform: translateX(100%); transition: transform .3s ease;
