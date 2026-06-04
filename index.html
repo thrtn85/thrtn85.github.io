@@ -12,122 +12,346 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>thrtn85 Solutions LLC</title>
+    <meta name="description" content="Thrtn85 Solutions helps small businesses and nonprofits grow with technology, branding, customer experience, and managed support solutions.">
+    <title>Thrtn85 Solutions | Technology, Branding & Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/3b1ab49e86.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<nav class="navbar">
-<div class="container">
-    <a href="#" class="logo">thrtn85 <span>Solutions</span></a>
-    <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#mission">Mission</a></li>
-        <li><a href="#contact" class="nav-cta">Let's Work</a></li>
-    </ul>
-    <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
-</div>
-</nav>
+<header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+        <div class="container nav-container">
+            <a href="#top" class="logo" aria-label="Thrtn85 Solutions home">
+                <span class="logo-main">thrtn<span>85</span></span>
+                <span class="logo-sub">Solutions</span>
+            </a>
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#work">Our Work</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary nav-action">Get a Free Consultation</a>
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+</header>
 
-<section class="hero">
-<div class="container">
-    <div class="hero-content z-up">
-        <span class="hero-badge"><i class="fa-solid fa-bolt"></i> Technical Solutions Partner</span>
-        <h1 class="hero-title">Empowering Businesses with <span class="highlight">Technical Solutions</span></h1>
-        <p class="hero-text">We help small businesses and non-profit organizations thrive with expert support in technology, branding, and customer experience.</p>
-        <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Get Started &#8594;</a>
-            <a href="#services" class="btn btn-secondary">Our Services</a>
+<main id="main">
+    <section class="hero" id="top">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <p class="eyebrow">Technology, Branding, Support.</p>
+                <h1>Solutions That Help Organizations Thrive</h1>
+                <p class="hero-text">We help small businesses and nonprofits grow with technology, creative branding, and customer experience solutions that drive real results.</p>
+                <div class="hero-buttons" aria-label="Primary calls to action">
+                    <a href="#contact" class="btn btn-primary">Get a Free Consultation <span aria-hidden="true">→</span></a>
+                    <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+                </div>
+                <ul class="trust-badges" aria-label="Trust badges">
+                    <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Small Business Focused</li>
+                    <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Nonprofit Friendly</li>
+                    <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> U.S. Based Support</li>
+                </ul>
+            </div>
+            <div class="hero-visual" aria-label="Modern technology workstation">
+                <div class="hero-image-card">
+                    <img src="assets/images/computer-screen.png" alt="Modern workstation showing technology work on a computer screen">
+                    <div class="floating-card floating-card-top">
+                        <span class="status-dot"></span>
+                        Live support ready
+                    </div>
+                    <div class="floating-card floating-card-bottom">
+                        <strong>85%</strong>
+                        <span>Clearer systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="logo-strip" aria-label="Trusted by small businesses and nonprofits">
+        <div class="container">
+            <p class="section-label">Trusted by small businesses and nonprofits</p>
+            <div class="logo-list">
+                <span>Watch Her Hoop</span>
+                <span>API Vitals</span>
+                <span>Kingdom Builders</span>
+                <span>Youth Impact</span>
+                <span>Next Level Academy</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-heading centered">
+                <p class="section-label">What We Do</p>
+                <h2>Services That Move Your Organization Forward</h2>
+            </div>
+            <div class="services-grid">
+                <article class="card service-card">
+                    <div class="icon"><i class="fa-solid fa-desktop" aria-hidden="true"></i></div>
+                    <h3>Technology Services</h3>
+                    <p>Websites, IT support, business systems, and technology consulting that keep your organization moving.</p>
+                    <a href="#contact">Learn More <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="card service-card">
+                    <div class="icon"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></div>
+                    <h3>Creative &amp; Branding</h3>
+                    <p>Brand identity, logos, marketing materials, and creative strategy that help your mission connect.</p>
+                    <a href="#contact">Learn More <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="card service-card">
+                    <div class="icon"><i class="fa-solid fa-headset" aria-hidden="true"></i></div>
+                    <h3>Customer Experience</h3>
+                    <p>Support systems, workflows, help centers, and customer journey improvements.</p>
+                    <a href="#contact">Learn More <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="card service-card">
+                    <div class="icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+                    <h3>Technology Assessments</h3>
+                    <p>Identify risks, inefficiencies, and opportunities to improve the way your team works.</p>
+                    <a href="#contact">Learn More <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="card service-card">
+                    <div class="icon"><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i></div>
+                    <h3>Managed Support</h3>
+                    <p>Ongoing website maintenance, updates, security, and reliable support.</p>
+                    <a href="#contact">Learn More <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="card service-card">
+                    <div class="icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
+                    <h3>Strategic Partnerships</h3>
+                    <p>Access our network of trusted specialists for projects of any size or scope.</p>
+                    <a href="#contact">Learn More <span aria-hidden="true">→</span></a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing section surface" id="pricing">
+        <div class="container">
+            <div class="section-heading split">
+                <div>
+                    <p class="section-label">Simple. Transparent. Affordable.</p>
+                    <h2>Pricing That Fits Your Budget</h2>
+                </div>
+                <a href="#contact" class="text-link">View All Pricing <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="pricing-grid">
+                <article class="card price-card featured">
+                    <span class="featured-badge">Most Popular</span>
+                    <div class="price-icon"><i class="fa-solid fa-desktop" aria-hidden="true"></i></div>
+                    <h3>Website Support</h3>
+                    <p class="price-kicker">Starting at</p>
+                    <p class="price"><span>$99</span> /month</p>
+                    <ul>
+                        <li>Hosting management</li>
+                        <li>Security updates</li>
+                        <li>Backups</li>
+                        <li>Technical support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Learn More</a>
+                </article>
+                <article class="card price-card">
+                    <div class="price-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
+                    <h3>Business Website</h3>
+                    <p class="price-kicker">Starting at</p>
+                    <p class="price"><span>$1,500</span></p>
+                    <ul>
+                        <li>Up to 5 pages</li>
+                        <li>Mobile friendly</li>
+                        <li>Contact forms</li>
+                        <li>SEO basics</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Learn More</a>
+                </article>
+                <article class="card price-card">
+                    <div class="price-icon"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+                    <h3>IT Consulting</h3>
+                    <p class="price-kicker">Starting at</p>
+                    <p class="price"><span>$125</span> /hr</p>
+                    <ul>
+                        <li>Technology assessments</li>
+                        <li>Process improvement</li>
+                        <li>Vendor recommendations</li>
+                        <li>Strategic guidance</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Learn More</a>
+                </article>
+                <article class="card price-card">
+                    <div class="price-icon"><i class="fa-solid fa-headset" aria-hidden="true"></i></div>
+                    <h3>Managed Support</h3>
+                    <p class="price custom-price">Custom<br>Pricing</p>
+                    <p class="custom-copy">Ongoing support tailored to your organization's needs.</p>
+                    <a href="#contact" class="btn btn-outline">Contact Us</a>
+                </article>
+            </div>
+            <p class="pricing-note"><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Nonprofit discounts available. Let's talk about how we can help.</p>
+        </div>
+    </section>
+
+    <section class="work section" id="work">
+        <div class="container">
+            <div class="section-heading split">
+                <div>
+                    <p class="section-label">Our Work</p>
+                    <h2>Solutions. Results. Impact.</h2>
+                </div>
+                <a href="#contact" class="text-link">View More Projects <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="work-grid">
+                <article class="work-card">
+                    <div class="work-image purple"><img src="assets/images/client-work.png" alt="Watch Her Hoop project preview"></div>
+                    <h3>Watch Her Hoop</h3>
+                    <p>Website Design &amp; Development</p>
+                </article>
+                <article class="work-card">
+                    <div class="work-image navy"><img src="assets/images/computer-screen.png" alt="API Vitals platform preview"></div>
+                    <h3>API Vitals</h3>
+                    <p>Platform Development</p>
+                </article>
+                <article class="work-card">
+                    <div class="work-image warm"><img src="assets/images/client-work.png" alt="Kingdom Builders project preview"></div>
+                    <h3>Kingdom Builders</h3>
+                    <p>Website Design</p>
+                </article>
+                <article class="work-card">
+                    <div class="work-image teal"><img src="assets/images/computer-screen.png" alt="Youth Impact brand and website preview"></div>
+                    <h3>Youth Impact</h3>
+                    <p>Branding &amp; Website Design</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="why section surface" id="about">
+        <div class="container why-grid">
+            <div class="why-intro">
+                <p class="section-label">Why Organizations Choose Us</p>
+                <h2>Your Partner in Growth</h2>
+                <p>We combine technology, creativity, and practical solutions to help organizations thrive.</p>
+                <a href="#contact" class="btn btn-primary">Let's Work Together <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="why-items">
+                <article>
+                    <i class="fa-solid fa-users" aria-hidden="true"></i>
+                    <h3>People First</h3>
+                    <p>We listen, collaborate, and care about your mission.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                    <h3>Fast &amp; Reliable</h3>
+                    <p>Responsive support when you need it most.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                    <h3>Secure &amp; Trusted</h3>
+                    <p>Protecting your data and your organization.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-chart-simple" aria-hidden="true"></i>
+                    <h3>Results Driven</h3>
+                    <p>Solutions that create real, measurable impact.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                    <h3>Long Term Partner</h3>
+                    <p>We grow with you every step of the way.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial" aria-label="Client testimonial">
+        <div class="container testimonial-card">
+            <div class="quote-mark" aria-hidden="true">“</div>
+            <div class="avatar" aria-hidden="true">JR</div>
+            <blockquote>
+                <p>Thrtn85 Solutions has been a game changer for our organization. They are professional, responsive, and truly understand the needs of nonprofits.</p>
+                <footer>— Jasmine R. <span>Executive Director, Youth Impact</span></footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="final-cta" id="contact">
+        <div class="container final-cta-grid">
+            <div>
+                <h2>Ready to Take the Next Step?</h2>
+                <p>Let's talk about your goals and build a plan that fits your organization and budget.</p>
+            </div>
+            <div class="cta-steps" aria-label="Consultation benefits">
+                <div><i class="fa-regular fa-comments" aria-hidden="true"></i><strong>Free Consultation</strong><span>Get expert guidance at no cost.</span></div>
+                <div><i class="fa-solid fa-bolt" aria-hidden="true"></i><strong>Clear Plan</strong><span>We'll outline the best solution for you.</span></div>
+                <div><i class="fa-solid fa-chart-simple" aria-hidden="true"></i><strong>Real Results</strong><span>Solutions that help you grow.</span></div>
+            </div>
+            <a href="mailto:hello@thrtn85.com" class="btn btn-primary">Schedule Your Free Consultation <span aria-hidden="true">→</span></a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" id="resources">
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <a href="#top" class="logo" aria-label="Thrtn85 Solutions home">
+                <span class="logo-main">thrtn<span>85</span></span>
+                <span class="logo-sub">Solutions</span>
+            </a>
+            <p>Helping small businesses and nonprofits grow through technology, branding, and customer experience solutions.</p>
+        </div>
+        <div>
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#work">Our Work</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Services</h2>
+            <ul>
+                <li><a href="#services">Technology Services</a></li>
+                <li><a href="#services">Creative &amp; Branding</a></li>
+                <li><a href="#services">Customer Experience</a></li>
+                <li><a href="#services">IT Consulting</a></li>
+                <li><a href="#services">Managed Support</a></li>
+                <li><a href="#services">Strategic Partnerships</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Contact</h2>
+            <ul class="contact-list">
+                <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:hello@thrtn85.com">hello@thrtn85.com</a></li>
+                <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+14041235685">(404) 123-5685</a></li>
+                <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Atlanta, GA</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Newsletter</h2>
+            <p>Tips, updates, and insights delivered to your inbox.</p>
+            <form class="newsletter-form" aria-label="Newsletter signup">
+                <label class="sr-only" for="newsletter-email">Email address</label>
+                <input id="newsletter-email" type="email" placeholder="Your email address" autocomplete="email">
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+            </form>
         </div>
     </div>
-    <div class="hero-visual z-up">
-        <div class="img-wrapper hero-image-wrapper">
-            <img src="assets/images/computer-screen.png" alt="Team collaborating">
-        </div>
+    <div class="container footer-bottom">
+        <p>&copy; 2026 Thrtn85 Solutions LLC. All rights reserved.</p>
+        <div><a href="#top">Privacy Policy</a><a href="#top">Terms of Service</a></div>
     </div>
-</div>
-</section>
-
-<section class="about" id="about">
-<div class="container">
-    <div class="img-wrapper about-image-wrapper">
-        <img src="assets/images/client-work.png" alt="Client work">
-    </div>
-    <div class="about-content">
-        <span class="section-label">About Us</span>
-        <h2 class="section-title">Solutions Tailored to Your Unique Needs</h2>
-        <p class="section-text">At thrtn85 Solutions, we specialize in providing top-notch technical solutions to small businesses and non-profit organizations across various industries. With a dedicated team of experts, we offer a range of services including business support, creative branding, and customer support.</p>
-        <a href="#services" class="btn btn-primary">Our Services &#8594;</a>
-    </div>
-</div>
-</section>
-
-<section class="services" id="services">
-<div class="container">
-    <div class="services-header">
-        <span class="section-label">What We Do</span>
-        <h2 class="section-title">Comprehensive Technical Solutions</h2>
-        <p class="section-text section-text--center">Whether you need help with technical troubleshooting, brand positioning, or customer engagement, we have the expertise and resources to meet your needs.</p>
-    </div>
-    <div class="services-grid">
-        <div class="card service-card">
-            <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-            <h3>Organization Support</h3>
-            <p>We streamline technology solutions, processes, and workflows, empowering your organization to run efficiently and scale confidently.</p>
-            <a href="#contact" class="service-link">Learn More &#8594;</a>
-        </div>
-        <div class="card service-card">
-            <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
-            <h3>Creative Branding</h3>
-            <p>Transform your brand's visual identity with design services that make a lasting impression and connect with your audience.</p>
-            <a href="#contact" class="service-link">Learn More &#8594;</a>
-        </div>
-        <div class="card service-card">
-            <div class="service-icon"><i class="fa-solid fa-comment"></i></div>
-            <h3>Customer Support</h3>
-            <p>Let us handle inquiries adeptly, enhancing visitor satisfaction and loyalty while you focus on core operations.</p>
-            <a href="#contact" class="service-link">Learn More &#8594;</a>
-        </div>
-    </div>
-</div>
-</section>
-
-<section class="mission" id="mission">
-<div class="container">
-    <span class="section-label">Our Mission</span>
-    <h2 class="section-title">Helping You Thrive in Today's Market</h2>
-    <p class="section-text section-text--center">Trusted by both small businesses and non-profit organizations, our mission is to provide the tools and support necessary to succeed in today's competitive landscape.</p>
-    <div class="mission-pillars">
-        <div class="card pillar"><div class="pillar-icon"><i class="fa-solid fa-bolt"></i></div><h3>Enhance Efficiency</h3><p>Streamline your workflows and eliminate bottlenecks with smart solutions.</p></div>
-        <div class="card pillar"><div class="pillar-icon"><i class="fa-solid fa-sun"></i></div><h3>Boost Brand Image</h3><p>Stand out from the crowd with a cohesive, professional brand identity.</p></div>
-        <div class="card pillar"><div class="pillar-icon"><i class="fa-solid fa-heart"></i></div><h3>Improve Satisfaction</h3><p>Deliver exceptional customer experiences that build loyalty and trust.</p></div>
-    </div>
-</div>
-</section>
-
-<section class="cta" id="contact">
-<div class="container">
-    <div class="cta-box">
-        <span class="section-label z-up">Ready to Start?</span>
-        <h2 class="section-title z-up">Let's Work Together!</h2>
-        <p class="section-text section-text--center z-up">Tell us about your project and we'll get back to you with a plan that fits your goals and budget.</p>
-        <div class="cta-buttons z-up">
-            <a href="mailto:hello@thrtn85.com" class="btn btn-primary">Get In Touch &#8594;</a>
-            <a href="#services" class="btn btn-secondary">View Services</a>
-        </div>
-        <p class="cta-email z-up">Or email us directly at <a href="mailto:hello@thrtn85.com">hello@thrtn85.com</a></p>
-    </div>
-</div>
-</section>
-
-<footer class="footer">
-<div class="container">
-    <div class="footer-left">&copy; 2026 thrtn85 Solutions LLC</div>
-    <ul class="footer-links"><li><a href="#">Privacy</a></li><li><a href="#contact">Contact Us</a></li></ul>
-</div>
 </footer>
 
 <script>
@@ -137,12 +361,20 @@
     menuToggle.addEventListener('click', () => {
         const isOpen = navLinks.classList.toggle('open');
         menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    const newsletterForm = document.querySelector('.newsletter-form');
+
+    newsletterForm.addEventListener('submit', event => {
+        event.preventDefault();
     });
 
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('open');
             menuToggle.setAttribute('aria-label', 'Open menu');
+            menuToggle.setAttribute('aria-expanded', 'false');
         });
     });
 </script>
