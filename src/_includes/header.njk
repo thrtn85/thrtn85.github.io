@@ -1,0 +1,43 @@
+<!-- ============================ HEADER ============================ -->
+<header class="site-header" id="siteHeader">
+  <nav class="nav" aria-label="Primary">
+    <a href="{{ brandHref }}" class="brand" aria-label="thrtn85 Solutions home">
+      <span class="brand-mark">
+        <span><span class="brand-13">thrtn</span><span class="brand-85">85</span></span>
+        <span class="brand-sub">SOLUTIONS</span>
+      </span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a class="nav-link" href="{{ home }}#about">About</a></li>
+      <li class="has-dd">
+        <a class="nav-link" href="{{ home }}#services">Services
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <div class="dropdown">
+{%- for s in site.services %}
+          <a href="{{ svcBase }}{{ s.slug }}.html">{{ s.label | safe }}</a>
+{%- endfor %}
+        </div>
+      </li>
+      <li><a class="nav-link" href="{{ home }}#pricing">Pricing</a></li>
+      <li><a class="nav-link" href="{{ home }}#work">Our Work</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="{{ home }}#consult" class="btn btn-primary">Get a Free Consultation</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="{{ home }}#about">About</a>
+  <a href="{{ home }}#services">Services</a>
+  <a href="{{ home }}#pricing">Pricing</a>
+  <a href="{{ home }}#work">Our Work</a>
+  <a href="{{ home }}#consult" class="btn btn-primary">Get a Free Consultation</a>
+</div>

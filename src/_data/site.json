@@ -1,0 +1,19 @@
+{
+  "email": "hello@thrtn85.com",
+  "copyright": "© 2026 thrtn85 Solutions LLC. All rights reserved.",
+  "footerAbout": "Helping small businesses and nonprofits grow through technology, branding, and customer experience solutions.",
+  "nav": [
+    { "label": "About", "anchor": "#about" },
+    { "label": "Services", "anchor": "#services", "dropdown": true },
+    { "label": "Pricing", "anchor": "#pricing" },
+    { "label": "Our Work", "anchor": "#work" }
+  ],
+  "services": [
+    { "slug": "technology-services", "label": "Technology Services" },
+    { "slug": "creative-branding", "label": "Creative &amp; Branding" },
+    { "slug": "customer-experience", "label": "Customer Experience" },
+    { "slug": "technology-assessments", "label": "Technology Assessments" },
+    { "slug": "managed-support", "label": "Managed Support" },
+    { "slug": "strategic-partnerships", "label": "Strategic Partnerships" }
+  ]
+}

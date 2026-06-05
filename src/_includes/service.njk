@@ -1,0 +1,148 @@
+---
+layout: base.njk
+---
+<!-- ============================ HERO ============================ -->
+<section class="hero hero-service">
+  <div class="container">
+    <div class="hero-content">
+      <p class="eyebrow eyebrow-accent">{{ hero.eyebrow | safe }}</p>
+      <h1>{{ hero.h1_pre | safe }}<span class="hl">{{ hero.h1_hl | safe }}</span></h1>
+      <p class="hero-sub">{{ hero.sub | safe }}</p>
+      <div class="hero-actions">
+        <a href="{{ home }}#consult" class="btn btn-primary">Get a Free Consultation
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="{{ hero.cta_secondary.href }}" class="btn btn-ghost-light">{{ hero.cta_secondary.label | safe }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ OVERVIEW ============================ -->
+<section class="section overview">
+  <div class="container">
+    <div class="overview-grid">
+      <div class="overview-head">
+        <p class="eyebrow eyebrow-accent is-left">{{ overview.eyebrow | safe }}</p>
+        <h2>{{ overview.h2_pre | safe }}<span class="hl">{{ overview.h2_hl | safe }}</span></h2>
+      </div>
+      <div class="overview-body">
+{%- for p in overview.paras %}
+        <p>{{ p | safe }}</p>
+{%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WHAT'S INCLUDED ============================ -->
+<section class="section services" id="included">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-accent">{{ included.eyebrow | safe }}</p>
+      <h2>{{ included.h2_pre | safe }}<span class="hl">{{ included.h2_hl | safe }}</span></h2>
+    </div>
+    <div class="services-grid">
+{%- for c in included.cards %}
+
+      <article class="svc-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">{{ icons[c.icon] | safe }}</svg></div>
+        <h3>{{ c.title | safe }}</h3>
+        <p>{{ c.body | safe }}</p>
+      </article>
+{%- endfor %}
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WHY THRTN85 ============================ -->
+<section class="section why">
+  <div class="container">
+    <p class="eyebrow eyebrow-accent is-left">Why thrtn85 Solutions</p>
+    <div class="why-grid">
+      <div class="why-intro">
+        <h2>{{ why.h2_pre | safe }}<span class="hl">{{ why.h2_hl | safe }}</span></h2>
+        <p>{{ why.intro | safe }}</p>
+        <a href="{{ home }}#consult" class="btn btn-primary">Let's Talk
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="why-items">
+{%- for item in why.items %}
+        <div class="why-item">
+          <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">{{ icons[item.icon] | safe }}</svg></div>
+          <h3>{{ item.title | safe }}</h3>
+          <p>{{ item.body | safe }}</p>
+        </div>
+{%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ IDEAL FOR ============================ -->
+<section class="section ideal">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-accent">{{ idealFor.eyebrow | safe }}</p>
+      <h2>{{ idealFor.h2_pre | safe }}<span class="hl">{{ idealFor.h2_hl | safe }}</span></h2>
+    </div>
+    <div class="ideal-grid">
+{%- for c in idealFor.cards %}
+      <article class="ideal-card">
+        <div class="ideal-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">{{ icons[c.icon] | safe }}</svg></div>
+        <h3>{{ c.title | safe }}</h3>
+        <p>{{ c.body | safe }}</p>
+      </article>
+{%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section faq">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-accent">Common Questions</p>
+      <h2>Good Questions, <span class="hl">Straight Answers</span></h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-list">
+{%- for item in faqs.items %}
+
+        <div class="faq-item">
+          <button class="faq-q" aria-controls="{{ faqs.idPrefix }}-faq{{ loop.index }}"><span>{{ item.q | safe }}</span>
+            <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a" id="{{ faqs.idPrefix }}-faq{{ loop.index }}"><p>{{ item.a | safe }}</p></div>
+        </div>
+{%- endfor %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="final-cta grid-bg" id="consult">
+  <div class="container">
+    <div class="final-left">
+      <p class="eyebrow eyebrow-accent is-left">Let's Get Started</p>
+      <h2>{{ finalCta.h2_pre | safe }}<span class="hl">{{ finalCta.h2_hl | safe }}</span></h2>
+      <p class="final-sub">{{ finalCta.sub | safe }}</p>
+    </div>
+    <div class="final-feats">
+{%- for f in finalCta.feats %}
+      <div class="final-feat">
+        <div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">{{ icons[f.icon] | safe }}</svg></div>
+        <h4>{{ f.h4 | safe }}</h4>
+        <p>{{ f.body | safe }}</p>
+      </div>
+{%- endfor %}
+    </div>
+    <a href="mailto:{{ site.email }}" class="btn btn-primary">Schedule Your Free Consultation
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>

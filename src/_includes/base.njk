@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include "head.njk" %}
+</head>
+<body>
+<a class="skip-link" href="#top">Skip to content</a>
+
+{% include "header.njk" %}
+
+<main id="top">
+{{ content | safe }}
+{% include "footer.njk" %}
+</main>
+
+<script src="{{ scriptSrc }}"></script>
+</body>
+</html>

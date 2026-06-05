@@ -1,0 +1,122 @@
+---
+permalink: /services/technology-services.html
+title: Technology Services | thrtn85 Solutions
+description: Websites, web applications, and practical technology consulting for small businesses, nonprofits, and growing teams. Built to work, easy to maintain, and made to fit your budget.
+hero:
+  eyebrow: Technology Services
+  h1_pre: "Technology That Actually "
+  h1_hl: Works for You
+  sub: From your website to the tools you use every day, we help you put the right technology in place and keep it simple enough to run without a headache.
+  cta_secondary:
+    href: "#included"
+    label: See What's Included
+overview:
+  eyebrow: The Overview
+  h2_pre: "One Partner for the "
+  h2_hl: Whole Picture
+  paras:
+    - "Our technology services cover the things that keep an organization running online: building your website or web application, choosing the right software, and tightening up the day-to-day processes that take more time than they should. It's hands-on work paired with honest advice."
+    - "This is a good fit if you're a small business owner, a nonprofit, or a growing team that knows technology <strong>should</strong> be helping more than it is. Maybe your site is out of date, your tools don't talk to each other, or you're paying for software no one really uses. We sort out what's worth keeping, what's worth changing, and what's worth building."
+    - "The point isn't more technology. It's the <strong>right</strong> technology, set up so your team can use it without calling for help every week. We explain the why behind every recommendation, so you always understand what you're paying for and what it does for you."
+included:
+  eyebrow: What's Included
+  h2_pre: "Everything You Need to "
+  h2_hl: Get Set Up
+  cards:
+    - icon: monitor
+      title: Business Websites
+      body: Clean, fast, mobile-friendly websites that tell your story and make it easy for people to reach you.
+    - icon: appWindow
+      title: Web Applications
+      body: "Custom tools and portals built around how your organization actually works: booking, member access, dashboards, and more."
+    - icon: person
+      title: Technology Consulting
+      body: A clear-headed advisor to talk through decisions, plan ahead, and keep your technology pointed at your goals.
+    - icon: sliders
+      title: Process Improvements
+      body: We find the steps that eat up your time and replace them with something simpler, faster, and less error-prone.
+    - icon: clipboardCheck
+      title: Software Recommendations
+      body: Honest, vendor-neutral guidance on the tools worth paying for, and the ones you can skip.
+    - icon: grid
+      title: Digital Tools Setup
+      body: Email, scheduling, file sharing, and payments, all set up properly and connected so your team isn't juggling logins.
+    - icon: shieldCheck
+      title: Built to Last
+      body: Everything we build is documented and easy to hand off, so you're never locked into one person to keep it going.
+    - icon: chat
+      title: Plain-English Support
+      body: Questions answered without the jargon, by someone who remembers your setup and actually picks up.
+why:
+  h2_pre: "Practical Help From People Who "
+  h2_hl: Get It
+  intro: We've run the day-to-day of real organizations, so we build for how work actually happens, not how it looks on a slide.
+  items:
+    - icon: person
+      title: Personal Service
+      body: You work with us directly, no account handoffs.
+    - icon: home2
+      title: Real Experience
+      body: Advice grounded in running actual businesses.
+    - icon: chat
+      title: Clear Communication
+      body: No jargon. You'll understand every step.
+    - icon: badge
+      title: Long-Term Partner
+      body: We stay with you as your needs grow.
+    - icon: bolt
+      title: Reliable Support
+      body: Responsive help when something comes up.
+idealFor:
+  eyebrow: Who It's For
+  h2_pre: "Built for Organizations Like "
+  h2_hl: Yours
+  cards:
+    - icon: building
+      title: Small Businesses
+      body: Get a professional online presence and tools that save you hours every week.
+    - icon: heart
+      title: Nonprofits
+      body: Stretch your budget with technology that supports your mission, not your overhead.
+    - icon: people
+      title: Community Organizations
+      body: Reach more people with a site and tools that are easy for volunteers to manage.
+    - icon: church
+      title: Churches
+      body: Connect with your congregation through online giving, events, and simple updates.
+    - icon: rocket
+      title: Startups
+      body: Launch with a solid foundation you can build on as you grow, without over-spending early.
+    - icon: bars
+      title: Growing Teams
+      body: Replace the patchwork of tools you've outgrown with systems that scale with you.
+faqs:
+  idPrefix: ts
+  items:
+    - q: How much does a website cost?
+      a: Most small business sites start around $1,500, depending on how many pages you need and what they have to do. We'll give you a clear, fixed quote before any work begins, with no surprise charges later.
+    - q: How long does a project take?
+      a: A straightforward business website usually takes two to four weeks. Larger web applications take longer. We'll lay out a realistic timeline up front and keep you posted as we go.
+    - q: Will I be able to update the site myself?
+      a: Yes. We build sites you can manage, and we'll walk you through how. If you'd rather we handle updates, our Managed Support service takes care of that for you.
+    - q: I already have a website. Can you just improve it?
+      a: Often, yes. We'll take a look at what you have and tell you honestly whether it's better to improve it or start fresh, and why. A Technology Assessment is a good place to start if you're not sure.
+    - q: I'm not very technical. Is that a problem?
+      a: Not at all. That's exactly who we're here for. We explain things in plain language and handle the technical side, so you can focus on running your organization.
+    - q: What happens after the project is finished?
+      a: We don't disappear. You'll have documentation, and we're available whenever you need a hand. Many clients stay with us through ongoing support as their needs change.
+finalCta:
+  h2_pre: "Ready to Put Your Technology to "
+  h2_hl: Work?
+  sub: Tell us what's slowing you down. We'll talk it through and map out a plan that fits your organization and your budget.
+  feats:
+    - icon: chat
+      h4: Free Consultation
+      body: Honest guidance at no cost.
+    - icon: bolt
+      h4: Clear Plan
+      body: A simple path forward you can follow.
+    - icon: bars
+      h4: Real Results
+      body: Technology that earns its keep.
+---

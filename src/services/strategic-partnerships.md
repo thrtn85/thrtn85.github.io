@@ -1,0 +1,122 @@
+---
+permalink: /services/strategic-partnerships.html
+title: Strategic Partnerships | thrtn85 Solutions
+description: When a project needs expertise beyond our own, we connect you with trusted, vetted specialists and stay your single point of contact, so you're never left to figure it out alone.
+hero:
+  eyebrow: Strategic Partnerships
+  h1_pre: "One Trusted Point of "
+  h1_hl: Contact
+  sub: When a project calls for expertise beyond what we do, we bring in specialists we trust and stay right beside you to manage it. You get the right help without the guesswork of finding it.
+  cta_secondary:
+    href: "#included"
+    label: See Who We Connect You With
+overview:
+  eyebrow: The Overview
+  h2_pre: "We'll Help You Find the "
+  h2_hl: Right People
+  paras:
+    - "No single company is the best choice for everything, and we won't pretend to be. When a project needs skills outside our core work, we tap a network of specialists we've come to trust and bring the right one to the table. Through it all, <strong>you keep one point of contact: us</strong>."
+    - "This is for any owner who's felt the weight of hiring out: chasing down quotes, vetting strangers, hoping the work lands and the pieces fit together. Instead of starting that search cold, you come to us, tell us what you need, and we connect you with someone we'd trust with our own name."
+    - "What you get is confidence and a lot less hassle. We make the introduction, help keep everyone on the same page, and stay involved so the project actually comes together. You're <strong>never handed off and forgotten</strong>. You've got a partner who's looking out for you the whole way."
+included:
+  eyebrow: Specialists We Connect You With
+  h2_pre: "The Right Expert for the "
+  h2_hl: Job
+  cards:
+    - icon: display
+      title: IT &amp; Managed IT
+      body: Day-to-day technical support, networks, and managed services to keep your operation running.
+    - icon: shieldCheck
+      title: Cybersecurity
+      body: Specialists who protect your systems and data, and help you respond if something goes wrong.
+    - icon: creativeDots
+      title: Branding &amp; Graphic Design
+      body: Designers who shape a brand and visuals that look the way your work deserves to look.
+    - icon: layers
+      title: Marketing
+      body: Partners who help you reach more of the right people and tell your story well.
+    - icon: camera
+      title: Photography &amp; Video
+      body: Pros who capture your team, your space, and your story for the web and beyond.
+    - icon: home2
+      title: Business Consulting
+      body: "Advisors for the bigger-picture decisions: operations, growth, and planning ahead."
+    - icon: clipboardCheck
+      title: Vetted, Not Random
+      body: Everyone we recommend has earned our trust through real, dependable work.
+    - icon: chat
+      title: One Point of Contact
+      body: You talk to us. We help coordinate the rest so it doesn't all land on your plate.
+why:
+  h2_pre: "A Partner Who Has Your "
+  h2_hl: Back
+  intro: We only point you toward people we'd hire ourselves. Our name is on every introduction, so we're careful about who earns one.
+  items:
+    - icon: shieldCheck
+      title: Trusted Network
+      body: Specialists we've vetted and worked with.
+    - icon: person
+      title: One Point of Contact
+      body: You deal with us, not a dozen vendors.
+    - icon: chat
+      title: Clear Communication
+      body: We keep everyone on the same page.
+    - icon: home2
+      title: Honest Recommendations
+      body: The right match, even when it isn't us.
+    - icon: badge
+      title: Long-Term Partner
+      body: We stay involved until it's done right.
+idealFor:
+  eyebrow: Who It's For
+  h2_pre: "Built for Organizations Like "
+  h2_hl: Yours
+  cards:
+    - icon: building
+      title: Small Businesses
+      body: Skip the cold search for vendors and get a trusted referral the first time.
+    - icon: heart
+      title: Nonprofits
+      body: Find partners who understand mission-driven work and respect a careful budget.
+    - icon: people
+      title: Community Organizations
+      body: Bring in extra expertise for a big project without a long, risky vendor hunt.
+    - icon: church
+      title: Churches
+      body: Get connected with dependable people for media, security, or growth projects.
+    - icon: rocket
+      title: Startups
+      body: Pull in specialized help on demand without building out a full team too early.
+    - icon: bars
+      title: Growing Teams
+      body: Add capacity in the areas you don't cover yet, with people you can trust.
+faqs:
+  idPrefix: sp
+  items:
+    - q: How is this different from just getting a referral?
+      a: We don't just hand you a name and walk away. We help define what you need, make the right introduction, and stay involved to keep things on track, so you're supported, not on your own.
+    - q: Do you charge extra for connecting me with a partner?
+      a: We'll be upfront about any costs from the start. For many introductions there's no added fee; for projects where we stay on to coordinate the work, we'll explain that scope and pricing clearly before you commit.
+    - q: How do you choose who's in your network?
+      a: "The same way we'd choose anyone we'd put our own name behind: proven, reliable work and people who treat clients well. If we wouldn't hire them, we won't recommend them."
+    - q: What if I already have a vendor in mind?
+      a: That's fine. We can work alongside someone you already trust, or give you an honest second opinion. The goal is the best outcome for you, not steering you toward our own list.
+    - q: Will you stay involved once the partner starts?
+      a: As much as you'd like us to. Some clients want us to coordinate the whole project; others just want the introduction. We'll set that up however works best for you.
+    - q: What kinds of projects do people come to you for?
+      a: Everything from cybersecurity and managed IT to branding, marketing, photography, video, and broader business consulting. If it's outside what we do directly, chances are we know someone good who does.
+finalCta:
+  h2_pre: "Tell Us What You Need. We'll Find the "
+  h2_hl: Right Fit
+  sub: Start with one conversation. We'll point you to the right people and stay in your corner from there.
+  feats:
+    - icon: chat
+      h4: Free Consultation
+      body: Honest guidance at no cost.
+    - icon: shieldCheck
+      h4: Trusted Match
+      body: Vetted specialists, not strangers.
+    - icon: person
+      h4: One Contact
+      body: We stay your go-to throughout.
+---
