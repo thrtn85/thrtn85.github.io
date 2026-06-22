@@ -24,27 +24,18 @@ included:
     - icon: monitor
       title: Business Websites
       body: Clean, fast, mobile-friendly websites that tell your story and make it easy for people to reach you.
-    - icon: appWindow
-      title: Web Applications
-      body: "Custom tools and portals built around how your organization actually works: booking, member access, dashboards, and more."
+    - icon: refresh
+      title: Business Systems & Automation
+      body: "Custom tools and connected systems built around how your organization actually works, automating the repetitive steps so your team spends less time on busywork."
     - icon: person
-      title: Technology Consulting
+      title: Technology Advisory
       body: A clear-headed advisor to talk through decisions, plan ahead, and keep your technology pointed at your goals.
     - icon: sliders
       title: Process Improvements
       body: We find the steps that eat up your time and replace them with something simpler, faster, and less error-prone.
-    - icon: clipboardCheck
-      title: Software Recommendations
-      body: Honest, vendor-neutral guidance on the tools worth paying for, and the ones you can skip.
-    - icon: grid
-      title: Digital Tools Setup
-      body: Email, scheduling, file sharing, and payments, all set up properly and connected so your team isn't juggling logins.
-    - icon: shieldCheck
-      title: Built to Last
-      body: Everything we build is documented and easy to hand off, so you're never locked into one person to keep it going.
-    - icon: chat
-      title: Plain-English Support
-      body: Questions answered without the jargon, by someone who remembers your setup and actually picks up.
+    - icon: wrench
+      title: Ongoing Support
+      body: Steady, responsive help that keeps everything running, from quick fixes to small improvements, by someone who remembers your setup.
 why:
   h2_pre: "Practical Help From People Who "
   h2_hl: Get It
