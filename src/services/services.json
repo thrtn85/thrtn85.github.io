@@ -1,8 +1,0 @@
-{
-  "layout": "service.njk",
-  "cssHref": "/assets/css/style.css",
-  "scriptSrc": "/assets/js/main.js",
-  "home": "/index.html",
-  "svcBase": "/services/",
-  "brandHref": "/index.html"
-}

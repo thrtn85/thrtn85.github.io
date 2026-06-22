@@ -1,0 +1,18 @@
+---
+// Generates one page per service entry at /services/<slug>/, rendering the
+// shared Service layout with the entry's validated data.
+import { getCollection } from "astro:content";
+import Service from "../../layouts/Service.astro";
+
+export async function getStaticPaths() {
+  const services = await getCollection("services");
+  return services.map((entry) => ({
+    params: { slug: entry.id },
+    props: { data: entry.data },
+  }));
+}
+
+const { data } = Astro.props;
+---
+
+<Service data={data} />

@@ -1,0 +1,39 @@
+---
+// Top-level page shell: <html>, <head>, skip link, header, <main> (page
+// content + footer), and the site script. Ported from the former Eleventy
+// `base.njk`. The footer sits inside <main> after the content, matching the
+// original markup exactly.
+import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  // brandHref/home distinguish the homepage (in-page anchors) from service
+  // pages (anchors that point back to the homepage). See Header.astro.
+  brandHref: string;
+  home: string;
+}
+
+const { title, description, brandHref, home } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <Head title={title} description={description} />
+</head>
+<body>
+<a class="skip-link" href="#top">Skip to content</a>
+
+<Header brandHref={brandHref} home={home} />
+
+<main id="top">
+<slot />
+<Footer brandHref={brandHref} home={home} />
+</main>
+
+<script is:inline src="/assets/js/main.js"></script>
+</body>
+</html>

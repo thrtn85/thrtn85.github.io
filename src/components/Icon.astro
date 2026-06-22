@@ -1,0 +1,16 @@
+---
+// Renders a named icon from src/data/icons.ts, inlined inside the standard
+// card-icon <svg> wrapper used across all pages (stroke-width 1.8). The inner
+// markup is emitted verbatim with set:html so the output matches the original
+// hand-written SVGs byte-for-byte.
+import { icons, type IconName } from "../data/icons";
+
+interface Props {
+  name: IconName;
+}
+
+const { name } = Astro.props;
+const inner = icons[name];
+---
+
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" set:html={inner} />

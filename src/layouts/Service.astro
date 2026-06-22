@@ -1,0 +1,164 @@
+---
+// The shared 7-section service page layout (hero, overview, what's included,
+// why thrtn85, ideal for, FAQ, final CTA). Ported from the former Eleventy
+// `service.njk`. Wraps Base.astro; service pages always use brandHref="/" and
+// home="/" so in-page CTAs point back to the homepage's #consult section.
+//
+// `| safe` fields from the originals are emitted with set:html / <Fragment>;
+// card icons render through the Icon component.
+import Base from "./Base.astro";
+import Icon from "../components/Icon.astro";
+import { site } from "../data/site";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  data: CollectionEntry<"services">["data"];
+}
+
+const { data } = Astro.props;
+const { hero, overview, included, why, idealFor, faqs, finalCta } = data;
+---
+
+<Base title={data.title} description={data.description} brandHref="/" home="/">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero hero-service">
+  <div class="container">
+    <div class="hero-content">
+      <p class="eyebrow eyebrow-accent" set:html={hero.eyebrow} />
+      <h1><Fragment set:html={hero.h1_pre} /><span class="hl" set:html={hero.h1_hl} /></h1>
+      <p class="hero-sub" set:html={hero.sub} />
+      <div class="hero-actions">
+        <a href="/#consult" class="btn btn-primary">Get a Free Consultation
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href={hero.cta_secondary.href} class="btn btn-ghost-light" set:html={hero.cta_secondary.label} />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ OVERVIEW ============================ -->
+<section class="section overview">
+  <div class="container">
+    <div class="overview-grid">
+      <div class="overview-head">
+        <p class="eyebrow eyebrow-accent is-left" set:html={overview.eyebrow} />
+        <h2><Fragment set:html={overview.h2_pre} /><span class="hl" set:html={overview.h2_hl} /></h2>
+      </div>
+      <div class="overview-body">
+        {overview.paras.map((p) => <p set:html={p} />)}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WHAT'S INCLUDED ============================ -->
+<section class="section services" id="included">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-accent" set:html={included.eyebrow} />
+      <h2><Fragment set:html={included.h2_pre} /><span class="hl" set:html={included.h2_hl} /></h2>
+    </div>
+    <div class="services-grid">
+      {included.cards.map((c) => (
+        <article class="svc-card">
+          <div class="svc-icon"><Icon name={c.icon} /></div>
+          <h3 set:html={c.title} />
+          <p set:html={c.body} />
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WHY THRTN85 ============================ -->
+<section class="section why">
+  <div class="container">
+    <p class="eyebrow eyebrow-accent is-left">Why thrtn85 Solutions</p>
+    <div class="why-grid">
+      <div class="why-intro">
+        <h2><Fragment set:html={why.h2_pre} /><span class="hl" set:html={why.h2_hl} /></h2>
+        <p set:html={why.intro} />
+        <a href="/#consult" class="btn btn-primary">Let's Talk
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="why-items">
+        {why.items.map((item) => (
+          <div class="why-item">
+            <div class="why-ic"><Icon name={item.icon} /></div>
+            <h3 set:html={item.title} />
+            <p set:html={item.body} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ IDEAL FOR ============================ -->
+<section class="section ideal">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-accent" set:html={idealFor.eyebrow} />
+      <h2><Fragment set:html={idealFor.h2_pre} /><span class="hl" set:html={idealFor.h2_hl} /></h2>
+    </div>
+    <div class="ideal-grid">
+      {idealFor.cards.map((c) => (
+        <article class="ideal-card">
+          <div class="ideal-ic"><Icon name={c.icon} /></div>
+          <h3 set:html={c.title} />
+          <p set:html={c.body} />
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section faq">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-accent">Common Questions</p>
+      <h2>Good Questions, <span class="hl">Straight Answers</span></h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-list">
+        {faqs.items.map((item, i) => (
+          <div class="faq-item">
+            <button class="faq-q" aria-controls={`${faqs.idPrefix}-faq${i + 1}`}><span set:html={item.q} />
+              <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-a" id={`${faqs.idPrefix}-faq${i + 1}`}><p set:html={item.a} /></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="final-cta grid-bg" id="consult">
+  <div class="container">
+    <div class="final-left">
+      <p class="eyebrow eyebrow-accent is-left">Let's Get Started</p>
+      <h2><Fragment set:html={finalCta.h2_pre} /><span class="hl" set:html={finalCta.h2_hl} /></h2>
+      <p class="final-sub" set:html={finalCta.sub} />
+    </div>
+    <div class="final-feats">
+      {finalCta.feats.map((f) => (
+        <div class="final-feat">
+          <div class="fic"><Icon name={f.icon} /></div>
+          <h4 set:html={f.h4} />
+          <p set:html={f.body} />
+        </div>
+      ))}
+    </div>
+    <a href={`mailto:${site.email}`} class="btn btn-primary">Schedule Your Free Consultation
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+</Base>

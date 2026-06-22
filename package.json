@@ -2,12 +2,17 @@
   "name": "thrtn85-site",
   "version": "1.0.0",
   "private": true,
-  "description": "thrtn85 Solutions marketing site (Eleventy).",
+  "description": "thrtn85 Solutions marketing site (Astro).",
+  "type": "module",
   "scripts": {
-    "build": "eleventy",
-    "serve": "eleventy --serve"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@astrojs/check": "^0.9.9",
+    "astro": "^6.4.8",
+    "typescript": "^6.0.3"
   }
 }

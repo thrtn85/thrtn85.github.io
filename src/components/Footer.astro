@@ -1,0 +1,65 @@
+---
+// Site footer: brand blurb, quick links, services list, contact, legal.
+// Ported from the former Eleventy `footer.njk`. See Header.astro for the
+// brandHref/home convention. Service links use clean URLs: /services/<slug>/.
+import { site } from "../data/site";
+
+interface Props {
+  brandHref: string;
+  home: string;
+}
+
+const { brandHref, home } = Astro.props;
+---
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href={brandHref} class="brand" aria-label="thrtn85 Solutions home">
+          <span class="brand-mark">
+            <span><span class="brand-13">thrtn</span><span class="brand-85">85</span></span>
+            <span class="brand-sub">SOLUTIONS</span>
+          </span>
+        </a>
+        <p class="footer-about">{site.footerAbout}</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href={`${home}#about`}>About Us</a></li>
+          <li><a href={`${home}#services`}>Services</a></li>
+          <li><a href={`${home}#pricing`}>Pricing</a></li>
+          <li><a href={`${home}#work`}>Our Work</a></li>
+          <li><a href={`${home}#consult`}>Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          {site.services.map((s) => (
+            <li><a href={`/services/${s.slug}/`} set:html={s.label} /></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg> {site.email}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>{site.copyright}</span>
+      <span class="legal">
+        <a href={`${home}#`}>Privacy Policy</a>
+        <a href={`${home}#`}>Terms of Service</a>
+      </span>
+    </div>
+  </div>
+</footer>
