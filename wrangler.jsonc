@@ -1,0 +1,10 @@
+{
+  // Cloudflare deploy contract for the thrtn85 static site.
+  // With Pages Git integration, the dashboard "Build command" + "Output
+  // directory" take precedence; this file documents intent and future-proofs a
+  // migration to Cloudflare Workers static assets.
+  "name": "thrtn85",
+  "compatibility_date": "2026-06-22",
+  "build": { "command": "npm run build" },
+  "assets": { "directory": "./dist" }
+}

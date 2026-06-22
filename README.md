@@ -124,14 +124,30 @@ are served as-is.
 
 ## Deploying
 
-The site is hosted on **Cloudflare Pages**. Configure the project with:
+The site is hosted on **Cloudflare Pages** (Git integration). Configure the
+project under **Settings → Builds & deployments → Build configuration**:
 
 - **Build command:** `npm run build`
-- **Output directory:** `dist`
+- **Build output directory:** `dist`
+- **Environment variable (Production *and* Preview):** `NODE_VERSION` = the value
+  in [`.node-version`](.node-version)
+
+> **Node version is mandatory.** Astro 6 requires Node `>=22.12.0`, but the
+> Cloudflare Pages build image defaults to Node 18. The repo pins the version in
+> both [`.node-version`](.node-version) (read by Cloudflare) and
+> [`.nvmrc`](.nvmrc) (local tooling) — keep them in sync. If a build fails with a
+> Node/engine error, check that `NODE_VERSION` is set on the Pages project.
+
+> **The build must run.** `dist/` is gitignored, so it is **not** committed.
+> Cloudflare must run `npm run build` to generate it. If the build log fails
+> immediately with `Output directory "dist" not found` and no build step ran, the
+> **Build command is empty/misconfigured** in the dashboard — set it to
+> `npm run build`.
 
 Cloudflare runs the build automatically on every push and serves the generated
-`dist/` folder. The custom domain is configured in the Cloudflare Pages dashboard
-under **Custom domains**, not in the repo.
+`dist/` folder. The deploy contract is also declared in
+[`wrangler.jsonc`](wrangler.jsonc). The custom domain is configured in the
+Cloudflare Pages dashboard under **Custom domains**, not in the repo.
 
 ---
 
