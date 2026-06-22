@@ -21,6 +21,9 @@ included:
   h2_pre: "Everything You Need to "
   h2_hl: Get Set Up
   cards:
+    - icon: appWindow
+      title: Landing Pages
+      body: Focused, single-purpose pages built to convert, perfect for a campaign, product launch, or sign-up that needs to load fast and drive one clear action.
     - icon: monitor
       title: Business Websites
       body: Clean, fast, mobile-friendly websites that tell your story and make it easy for people to reach you.

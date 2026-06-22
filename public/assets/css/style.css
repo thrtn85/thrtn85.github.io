@@ -458,6 +458,63 @@ img { display: block; max-width: 100%; }
 }
 .pricing-note svg { width: 19px; height: 19px; color: var(--blue); }
 
+/* ---------- Homepage pricing teaser (5 category cards) ---------- */
+.price-teaser-grid {
+  display: grid; gap: 18px;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: stretch;
+}
+.price-teaser-card {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: var(--radius-card); padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.price-teaser-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--blue); }
+.price-teaser-card .svc-icon { width: 46px; height: 46px; margin-bottom: 18px; }
+.price-teaser-card .svc-icon svg { width: 22px; height: 22px; }
+.price-teaser-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.01em; }
+.price-teaser-card p { color: var(--text-2); font-size: 14.5px; margin-bottom: 16px; }
+.price-teaser-from {
+  margin-top: auto; font-family: var(--font-mono); font-size: 14px;
+  font-weight: 600; color: var(--blue); letter-spacing: -0.01em;
+}
+.price-teaser-cta { text-align: center; margin-top: 36px; }
+
+/* ---------- Full pricing page (/pricing/) ---------- */
+.pricing-cat { background: transparent; padding-block: 64px; }
+.pricing-cat:nth-of-type(even) { background: var(--surface); }
+.pricing-cat .section-head { margin-bottom: 40px; }
+.pricing-cat-intro { color: var(--text-2); font-size: 16px; margin-top: 14px; }
+/* On the full page, cards are auto-fit so single-service categories don't stretch full width. */
+.pricing-cat .pricing-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 920px; margin: 0 auto;
+}
+.price-bestfor {
+  font-size: 14px; color: var(--text-3);
+  margin: 0 0 22px; padding-top: 16px; border-top: 1px solid var(--border);
+}
+.price-bestfor strong { color: var(--text-2); font-weight: 600; }
+
+/* ---------- "How pricing works" summary band ---------- */
+.pricing-how { background: transparent; }
+.pricing-how-panel {
+  background: var(--ink); color: #fff;
+  border-radius: var(--radius-card); padding: 56px 48px;
+  text-align: center;
+}
+.pricing-how-panel .section-head { margin-bottom: 40px; }
+.pricing-how-panel .section-head h2 { color: #fff; }
+.pricing-how-grid {
+  display: grid; gap: 28px;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: left; margin-bottom: 40px;
+}
+.pricing-how-item h4 { font-size: 16px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+.pricing-how-item p { font-size: 14.5px; color: rgba(226,232,240,.82); }
+
 /* ============================================================
    OUR WORK
    ============================================================ */
@@ -626,6 +683,8 @@ img { display: block; max-width: 100%; }
   :root { --section-y: 76px; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+  .price-teaser-grid { grid-template-columns: repeat(3, 1fr); }
+  .pricing-how-grid { grid-template-columns: repeat(2, 1fr); }
   .work-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: 1fr; gap: 40px; }
   .why-items { grid-template-columns: repeat(5, 1fr); gap: 14px; }
@@ -647,6 +706,8 @@ img { display: block; max-width: 100%; }
   .container { padding-inline: 22px; }
   .nav { padding-inline: 22px; }
   .services-grid, .pricing-grid, .work-grid { grid-template-columns: 1fr; }
+  .price-teaser-grid, .pricing-how-grid { grid-template-columns: 1fr; }
+  .pricing-how-panel { padding: 40px 24px; }
   .hero { padding-top: 130px; }
   .hero-actions .btn { flex: 1 1 auto; }
   .hero-badges { gap: 14px; flex-direction: column; }

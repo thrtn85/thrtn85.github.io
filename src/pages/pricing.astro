@@ -1,0 +1,280 @@
+---
+// Full pricing page (/pricing/). The decision-making counterpart to the
+// homepage pricing teaser: every service grouped into five labeled categories,
+// each with a price, "what's included" bullets, and a "best for" line, plus a
+// closing "how pricing works" summary. brandHref="/" / home="/" mirror the
+// service pages so header anchors point back to the homepage. Card icons render
+// through the Icon component; included bullets are trimmed from the service YAML.
+import Base from "../layouts/Base.astro";
+import Icon from "../components/Icon.astro";
+import type { IconName } from "../data/icons";
+
+const title = "Pricing | thrtn85 Solutions";
+const description =
+  "Simple, transparent pricing for websites, branding, business systems, ongoing support, and technology advice. Clear starting prices and a fixed quote before any work begins.";
+
+interface Service {
+  icon: IconName;
+  name: string;
+  big: string;
+  per?: string;
+  custom?: boolean;
+  features: string[];
+  bestFor: string;
+}
+
+interface Category {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  services: Service[];
+}
+
+const categories: Category[] = [
+  {
+    eyebrow: "01 — Get Seen",
+    title: "Start with Visibility",
+    intro:
+      "Get found and look the part: a focused landing page, a full website, or the brand to tie it all together.",
+    services: [
+      {
+        icon: "appWindow",
+        name: "Landing Page",
+        big: "$500",
+        features: [
+          "One focused page built to drive a single action",
+          "Mobile-friendly and fast to load",
+          "Clear call-to-action and contact form",
+        ],
+        bestFor: "A single focused page to launch or promote one thing.",
+      },
+      {
+        icon: "monitor",
+        name: "Business Website",
+        big: "$1,500",
+        features: [
+          "Clean, fast, mobile-friendly multi-page site",
+          "Contact forms and the basics done right",
+          "SEO foundations so people can find you",
+          "Built so you can update it yourself",
+        ],
+        bestFor: "Small businesses needing a real, multi-page presence.",
+      },
+      {
+        icon: "creativeDots",
+        name: "Creative & Branding",
+        big: "$750",
+        features: [
+          "A clean, memorable logo that works everywhere",
+          "Brand identity: colors, fonts, and style",
+          "Simple brand guidelines to stay consistent",
+          "The usable files you own outright",
+        ],
+        bestFor: "Anyone whose look doesn't yet match the quality of their work.",
+      },
+    ],
+  },
+  {
+    eyebrow: "02 — Work Smarter",
+    title: "Build Better Systems",
+    intro:
+      "Replace the manual, repetitive steps that eat your team's time with tools built around how you actually work.",
+    services: [
+      {
+        icon: "refresh",
+        name: "Business Systems & Automation",
+        big: "$2,500",
+        features: [
+          "Custom tools built around your real workflow",
+          "Connected systems so your tools talk to each other",
+          "Automation for the repetitive, manual steps",
+          "Process improvements that remove busywork",
+        ],
+        bestFor: "Teams losing hours to manual, repetitive work.",
+      },
+    ],
+  },
+  {
+    eyebrow: "03 — Stay Steady",
+    title: "Keep Everything Running Smoothly",
+    intro:
+      "Steady, responsive care so your website and your customers are always looked after, month to month.",
+    services: [
+      {
+        icon: "wrench",
+        name: "Managed Support",
+        big: "$99",
+        per: "/month",
+        features: [
+          "Maintenance, updates, and monitoring",
+          "Security checks and regular backups",
+          "Troubleshooting that fixes the root cause",
+          "A real person who knows your setup",
+        ],
+        bestFor: "Owners who don't want their website to be one more job.",
+      },
+      {
+        icon: "chat",
+        name: "Customer Experience Support",
+        big: "$199",
+        per: "/month",
+        features: [
+          "Help center and knowledge base setup",
+          "Support workflows and ticketing",
+          "Templates and saved replies that still sound human",
+          "Team onboarding so it actually gets used",
+        ],
+        bestFor: "Teams who want customers cared for without hiring in-house.",
+      },
+    ],
+  },
+  {
+    eyebrow: "04 — Plan Ahead",
+    title: "Get Clarity Before You Build",
+    intro:
+      "Know what's worth fixing, keeping, or changing before you spend a dollar building it.",
+    services: [
+      {
+        icon: "clipboardCheck",
+        name: "Technology Assessments",
+        big: "$500",
+        features: [
+          "Website, technology, and security review",
+          "A look at the processes that slow you down",
+          "Quick wins you can act on right away",
+          "A prioritized, plain-English plan",
+        ],
+        bestFor: "Anyone unsure what to fix, keep, or replace.",
+      },
+      {
+        icon: "person",
+        name: "Technology Advisory",
+        big: "$125",
+        per: "/hr",
+        features: [
+          "A clear-headed advisor to talk decisions through",
+          "Planning ahead and vendor recommendations",
+          "Strategic guidance pointed at your goals",
+          "Honest advice, no jargon",
+        ],
+        bestFor: "Owners who want a clear-headed advisor on call.",
+      },
+    ],
+  },
+  {
+    eyebrow: "05 — Go Bigger",
+    title: "Flexible Help for Bigger Needs",
+    intro:
+      "For larger or specialized projects, we bring in trusted specialists and coordinate the work for you.",
+    services: [
+      {
+        icon: "people",
+        name: "Strategic Partnerships",
+        big: "Custom",
+        custom: true,
+        features: [
+          "Vetted specialists across IT, security, and design",
+          "Marketing, photography, and video partners",
+          "Business consulting for bigger decisions",
+          "One point of contact — we coordinate the rest",
+        ],
+        bestFor: "Larger or specialized projects needing extra hands.",
+      },
+    ],
+  },
+];
+---
+
+<Base title={title} description={description} brandHref="/" home="/">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero hero-service">
+    <div class="container">
+      <div class="hero-content">
+        <p class="eyebrow eyebrow-accent">Pricing</p>
+        <h1>Simple Pricing, <span class="hl">No Surprises</span></h1>
+        <p class="hero-sub">Clear starting prices for everything we do, grouped by where you are right now. You'll always get a fixed quote before any work begins.</p>
+        <div class="hero-actions">
+          <a href="/#consult" class="btn btn-primary">Get a Free Consultation
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#pricing-how" class="btn btn-ghost-light">How Pricing Works</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CATEGORY SECTIONS ============================ -->
+  {categories.map((cat) => (
+    <section class="section pricing-cat">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-accent">{cat.eyebrow}</p>
+          <h2>{cat.title}</h2>
+          <p class="pricing-cat-intro">{cat.intro}</p>
+        </div>
+        <div class="pricing-grid">
+          {cat.services.map((svc) => (
+            <article class="price-card">
+              <div class="price-head">
+                <span class="price-ic"><Icon name={svc.icon} /></span>
+                <h3>{svc.name}</h3>
+              </div>
+              <div class="price-amount">
+                <span class="from">Starting at</span>
+                {svc.custom ? (
+                  <span class="custom">{svc.big}</span>
+                ) : (
+                  <Fragment>
+                    <span class="big">{svc.big}</span>{svc.per && <span class="per"> {svc.per}</span>}
+                  </Fragment>
+                )}
+              </div>
+              <ul class="price-features">
+                {svc.features.map((f) => (
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 12 4 4 10-10"/></svg> {f}</li>
+                ))}
+              </ul>
+              <p class="price-bestfor"><strong>Best for:</strong> {svc.bestFor}</p>
+              <a href="/#consult" class="btn btn-outline btn-block">Get a Free Consultation</a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- ============================ HOW PRICING WORKS ============================ -->
+  <section class="section pricing-how" id="pricing-how">
+    <div class="container">
+      <div class="pricing-how-panel">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-accent">The Fine Print, In Plain English</p>
+          <h2>How Pricing Works</h2>
+        </div>
+        <div class="pricing-how-grid">
+          <div class="pricing-how-item">
+            <h4>Real starting points</h4>
+            <p>The prices above are honest starting points, not bait. Your final number depends on what you actually need, and we'll explain it.</p>
+          </div>
+          <div class="pricing-how-item">
+            <h4>A fixed quote first</h4>
+            <p>You get a clear, fixed quote before any work begins. No surprise charges later, and no clock running while we talk.</p>
+          </div>
+          <div class="pricing-how-item">
+            <h4>Month to month</h4>
+            <p>Monthly support plans are month to month, with no long lock-ins. We earn your business each month, not with a contract.</p>
+          </div>
+          <div class="pricing-how-item">
+            <h4>Nonprofit discounts</h4>
+            <p>Running a nonprofit? Let's talk. We offer discounts to help your budget stretch further toward your mission.</p>
+          </div>
+        </div>
+        <a href="/#consult" class="btn btn-primary">Get a Free Consultation
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Base>
